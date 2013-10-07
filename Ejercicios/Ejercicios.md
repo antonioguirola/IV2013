@@ -1,4 +1,4 @@
-===Ejercicio 1)===
+Ejercicio 1)
 
 El servidor que he seleccionado es un Dell PowerEdge T420 ([http://configure.euro.dell.com/dellstore/config.aspx?oc=pet420u&model_id=poweredge-t420&c=es&l=es&s=bsd&cs=esbsdt1]), cuyo precio base es de 2599,00€.
 
@@ -15,11 +15,11 @@ Para 7 años:
 
 Hay que tener en cuenta que en cualquiera de los casos hay que aplicar como coste el 100% del IVA.
 
-===Ejercicio 5)===
+Ejercicio 5)
 
 Para ello sólo hay que ejecutar en el terminal "sudo apt-get install git"
 
-===Ejercicio 6)===
+Ejercicio 6)
 
 Tras crear el repositorio en github (en mi caso se llama IV2013) se crea una carpeta con el mismo nombre en el disco duro y se usan las siguientes órdenes:
 
@@ -29,7 +29,7 @@ git add README.md ---> Añadimos al repo local el archivo README <br/>
 git commit -m "Primer cambio" ---> Fijamos los cambios añadiendo un mensaje <br/>
 git push origin master ---> Subimos los cambios al repositorio remoto <br/>
 
-===Ejercicio 7)===
+Ejercicio 7)
 
 He creado tres grupos: buenos, malos y regulares; y les he asignado los procesos chrome, gedit y bash respectivamente.
 
