@@ -1,4 +1,4 @@
-Ejercicio 1)
+**Ejercicio 1)**
 
 El servidor que he seleccionado es un Dell PowerEdge T420 ([http://configure.euro.dell.com/dellstore/config.aspx?oc=pet420u&model_id=poweredge-t420&c=es&l=es&s=bsd&cs=esbsdt1]), cuyo precio base es de 2599,00€.
 
