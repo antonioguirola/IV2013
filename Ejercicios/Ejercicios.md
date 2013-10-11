@@ -39,3 +39,7 @@ cat malos/cpuacct.usage  --> 113046023  <br/>
 cat regulares/cpuacct.usage --> 142546251  <br/>
 
 Como se puede observar el navegador web es el proceso que más ha consumido.
+
+**Ejercicio 12)**
+
+En mi caso he instalado el virtualenv de Python. En primer lugar tuve que instalar pip (sudo apt-get install python-pip) y a continuación ejecutar la orden "sudo pip virtualenv"
