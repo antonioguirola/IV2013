@@ -49,6 +49,15 @@ flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36
 
 Se trata de un procesador de Intel, modelo Core 2 Duo T7250, con dos núcleos a 2GHz cada uno. Esta información ha sido obtenida mediante la orden `cat /proc/cpuinfo`
 
+**Ejercicio 10)**
+
+Para poder ejecutar la orden en primer lugar tuve que instalar el paquete *cpu-checker*, una vez realizado eso pude ejecutar `kvm-ok` y obtuve la siguiente salida: <br>
+*INFO: /dev/kvm exists <br>
+KVM acceleration can be used*
+
+Por lo tanto el **módulo KVM está activado** en el kernel de mi sistema.
+
+
 
 **Ejercicio 12)**
 
