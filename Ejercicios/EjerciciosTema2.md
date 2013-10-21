@@ -1,4 +1,4 @@
-**Ejercicio 1)**
+###Ejercicio 1)
 
 Para realizar el ejercicio me he descargado la iso de [lubuntu 13.10](https://help.ubuntu.com/community/Lubuntu/GetLubuntu) por ejemplo.
 
@@ -11,3 +11,13 @@ Para comprobar que es correcto abrimos otro terminal con un hostname diferente e
 ![captura](https://dl.dropboxusercontent.com/s/qhciv9a2t1ha0mc/ej1-2.png?m)
 
 De esta manera hemos comprobado que sólo es accesible desde el espacio de nombres creado al principio.
+
+###Ejercicio 2)
+
+*1.- Mostrar los puentes configurados en el sistema operativo*
+
+Como muestra la siguiente captura no tengo configurado ningún puente en el sistema:
+
+![captura](https://dl.dropboxusercontent.com/s/x1zvepj5bgrtnxu/ej2-1.png)
+
+
