@@ -45,7 +45,7 @@ En mi caso he instalado un sistema Ubuntu de 32 bits:
 
 ![captura](https://dl.dropboxusercontent.com/s/ewnfc74scphgnvm/ej3-1.png)
 
-**2.- Experimentar con la creación de un sistema Fedora dentro de Debian usando Rinse.
+*2.- Experimentar con la creación de un sistema Fedora dentro de Debian usando Rinse.*
 
 Tras instalar el paquete Rinse he instalado he ejecutado la orden `sudo rinse --arch i386 --directory /home/antonio/jaulas/fedora --distribution fedora-core-10` para instalar un sistema Fedora:
 
@@ -56,14 +56,16 @@ Tras instalar el paquete Rinse he instalado he ejecutado la orden `sudo rinse --
 
 Una vez descargada con debootstrap el sistema Debian (Ubuntu) en la máquina anfitriona hay que configurar la máquina anfintriona:
 
-`
-sudo apt-get install dchroot
-sudo mkdir /var/chroot
-sudo chroot /var/chroot
+```sh
+sudo apt-get install dchroot <br>
+sudo mkdir /var/chroot	
+sudo chroot /var/chroot	
 sudo nano /etc/schroot/schroot.conf
+```	
 
 Y añadir al final del archivo:
 
+```sh
 [Ubuntu]
 description=Ubuntu
 location=/var/chroot
@@ -71,9 +73,7 @@ priority=3
 users=antonio
 groups=sbuild
 root-groups=root
-
-
-`
+```
 
 Continua.....
 
