@@ -51,6 +51,7 @@ Tras instalar el paquete Rinse he instalado he ejecutado la orden `sudo rinse --
 
 ![captura](https://dl.dropboxusercontent.com/s/chieahlb4oio21c/ej3-2.png)
 
+##Sesión del 4/11
 
 ### Ejercicio 4)
 
