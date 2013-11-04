@@ -68,14 +68,32 @@ Y añadir al final del archivo:
 ```sh
 [Ubuntu]
 description=Ubuntu
-location=/var/chroot
+location=/home/antonio/jaulas/antonio
 priority=3
 users=antonio
 groups=sbuild
 root-groups=root
 ```
 
-Continua.....
+A continuación hay que configurar el directorio proc, para ello, desde la máquina anfitriona:
+```sh
+sudo mount -o bind /proc /home/antonio/jaulas/ubuntu/proc/
+sudo cp /etc/resolv.conf /home/antonio/jaulas/ubuntu/etc/resolv.conf
+```
+
+Una vez hecho esto podemos ir a la jaula y comprobar que efectivamente se ejecutan órdenes como por ejemplo *top*
+
+![captura](https://dl.dropboxusercontent.com/s/xqwm7pq3yqc8a8a/ej4-1.png)
+
+
+### Ejercicio 5)
+
+Utilizo la misma jaula Ubuntu del ejercicio anterior para instalar el servidor nginx en ella, como se ha configurado el acceso a Internet se pueden instalar paquetes sin problemas, en primer lugar, como se indica [en la documentación oficial](http://wiki.nginx.org/Install) hay que añadir el repositorio en el archivo */etc/apt/sources.list*
+
+Continua....
+
+
+
 
 
 
