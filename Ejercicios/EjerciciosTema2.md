@@ -89,10 +89,62 @@ Una vez hecho esto podemos ir a la jaula y comprobar que efectivamente se ejecut
 
 ### Ejercicio 5)
 
-Utilizo la misma jaula Ubuntu del ejercicio anterior para instalar el servidor nginx en ella, como se ha configurado el acceso a Internet se pueden instalar paquetes sin problemas, en primer lugar, como se indica [en la documentación oficial](http://wiki.nginx.org/Install) hay que añadir el repositorio en el archivo */etc/apt/sources.list*
+Utilizo la misma jaula Ubuntu del ejercicio anterior para instalar el servidor nginx en ella, como se ha configurado el acceso a Internet se pueden instalar paquetes sin problemas, en primer lugar, como se indica [en la documentación oficial](http://wiki.nginx.org/Install) hay que añadir el repositorio en el archivo */etc/apt/sources.list*, en mi caso queda así:
 
-Continua....
+![captura](https://dl.dropboxusercontent.com/s/3h5kb1qzpfp7re1/ej5-1.png)
 
+He tenido problemas al instalar los paquetes de nginx, me aparecía el siguiente mensaje:
+
+![captura](https://dl.dropboxusercontent.com/s/s0zr7bbi3ghov2b/ej5-2.png)
+
+Pero he seguido [este tutorial](http://andrewelkins.com/linux/depends-libssl0-9-8-0-9-8m-1-but-it-is-not-installable/) y lo he podido solucionar.
+
+Por otro lado le he asignado un usuario a la jaula desde la máquina anfitriona:
+
+```sh
+sudo useradd -s /bin/bash -m -d /home/antonio/jaulas/ubuntu/./home/usernginx -c "Ubuntu usernginx" -g users usernginx
+sudo passwd usernginx
+```
+Y pruebo el usuario para lanzar el servidor web:
+
+```sh
+su - usernginx
+```
+Una vez iniciado el usuario puedo acceder al servidor web:
+
+![captura](https://dl.dropboxusercontent.com/s/tub5qmym6tnvovo/ej5-3.png)
+
+
+### Ejercicio 6)
+
+Para realizar este ejercicio [éste](http://ubuntuforums.org/archive/index.php/t-248724.html) tutorial me ha ayudado.
+
+El primer paso es instalar jailkit, y a continuación instalar la jaula con las características necesarias:
+
+```sh
+sudo mkdir -p /jaulas/jailkit/segura1
+sudo chown -R root:root /jaulas
+sudo jk_init -v -j /jaulas/jailkit/segura1/ jk_lsh basicshell netutils editors
+```
+A continuación se crea un usuario:
+
+```sh
+sudo useradd userIV
+sudo jk_jailuser -m -j /jaulas/jailkit/segura1 userIV
+sudo passwd userIV
+sudo chown userIV:userIV /jaulas/jailkit/segura1/home/userIV/
+```
+A continuación hay que editar el archivo */etc/passwd* de la jaula y añadir la línea:
+
+![captura](https://dl.dropboxusercontent.com/s/a8et6tj82utth57/ej6-1.png)
+
+Y el fichero */etc/group* y añadir:
+
+![captura](https://dl.dropboxusercontent.com/s/0l7tcd3sc19r71c/ej6-2.png)
+
+Una vez realizados todos los pasos ya podemos conectarnos a la jaula mediante ssh por ejemplo:
+
+![captura](https://dl.dropboxusercontent.com/s/u086o1d28mvqozn/ej6-3.png)
 
 
 
