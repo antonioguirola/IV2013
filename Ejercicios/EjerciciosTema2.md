@@ -58,7 +58,7 @@ Tras instalar el paquete Rinse he instalado he ejecutado la orden `sudo rinse --
 Una vez descargada con debootstrap el sistema Debian (Ubuntu) en la máquina anfitriona hay que configurar la máquina anfintriona:
 
 ```sh
-sudo apt-get install dchroot <br>
+sudo apt-get install dchroot
 sudo mkdir /var/chroot	
 sudo chroot /var/chroot	
 sudo nano /etc/schroot/schroot.conf
