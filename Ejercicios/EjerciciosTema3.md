@@ -16,3 +16,50 @@ Y por último vemos los puentes de red activos `sudo brctl show`:
 ![captura](https://dl.dropboxusercontent.com/s/c5mxvgy08tn8r22/ej2-2.png)
 
 Como se observa se ha creado un puente de red hacia el contenedor llamado *lxcbr0*.
+
+##Sesión 15/11
+
+###Ejercicio 3)
+
+**1.- Crear un contenedor basado en Debian**
+
+Uso el mismo que el mostrado en el ejercicio anterior, le paso mi usuario para que lo reconozca `sudo lxc-start -n caja1`, los datos de acceso son los que usa lxc por defecto: Ubuntu - Ubuntu:
+
+![captura](https://dl.dropboxusercontent.com/s/z04s9xe9v33vlw5/ej3-1.png)
+
+**2.- Instalar un contenedor de una distribución distinta a la tuya**
+
+He intentado instalar un contenedor Fedora en mi Linux Mint pero me salían errores, he creado un issue al respecto.
+
+He intentado la solución de José Colella, sustituyendo la plantilla de fedora por [ésta](https://raw.github.com/fajarnugraha/lxc/master/templates/lxc-fedora.in) pero el error persiste.
+
+###Ejercicio 4)
+
+**1.- Instalar lxc-webpanel y usarlo para arrancar, parar y visualizar las máquinas virtuales que se tengan instaladas.**
+
+Los pasos para instalarlo son:
+
+```sh
+sudo su
+sudo wget http://lxc-webpanel.github.io/tools/install.sh -O - | bash
+```
+
+Para tener más de un táper he clonado el que tenía: `sudo lxc-clone -o caja1 -n caja2`
+
+Y comprobamos que se haya completado la instalación:
+
+![captura](https://dl.dropboxusercontent.com/s/pgi8zm1egvyvzha/ej4-1.png)
+
+A continuación, si entramos en la IP local con el puerto 5000 y nos logeamos accedemos al panel de administración de los tápers:
+
+![captura](https://dl.dropboxusercontent.com/s/z0plwt7isog1z18/ej4-2.png)
+
+**2.- Desde el panel restringir los recursos que pueden usar: CPU shares, CPUs que se pueden usar (en sistemas multinúcleo) o cantidad de memoria.**
+
+Para modificar los recursos asignados a cada táper desde el panel web sólo hay que pinchar en su nombre y modificar los sliders correspondientes (**NOTA: el táper no puede estar corriendo**):
+
+
+![captura](https://dl.dropboxusercontent.com/s/suvihsdd09py1gu/ej4-3.png)
+
+
+
