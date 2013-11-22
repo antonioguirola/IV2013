@@ -61,5 +61,37 @@ Para modificar los recursos asignados a cada táper desde el panel web sólo hay
 
 ![captura](https://dl.dropboxusercontent.com/s/suvihsdd09py1gu/ej4-3.png)
 
+###Ejercicio 6)
+
+**1.- Instalar juju**
+
+El primer paso es añadir el respositorio e instalar juju:
+
+```sh
+sudo add-apt-repository ppa:juju/stable
+sudo apt-get update && sudo apt-get install juju-core
+```
+![captura](capturas/ej6-1.png)
+
+Establecer *local* como sistema por defecto:
+
+![captura](capturas/ej6-2.png)
+
+Y configurar el sistema para que funcione en local:
+```sh
+sudo apt-get install juju-local linux-image-generic-lts-raring linux-headers-generic-lts-raring
+sudo apt-get install openssh-server
+ssh-keygen
+``
+
+E instalar MongoDB mediante `sudo apt-get install mongodb-server`.
+
+**2.- Usándolo, instalar MySql en un táper.**
+
+Ejecutar `sudo juju deploy mysql`
+
+![captura](capturas/ej6-3.png)
+
+
 
 
