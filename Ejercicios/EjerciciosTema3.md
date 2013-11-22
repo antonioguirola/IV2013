@@ -82,13 +82,13 @@ Y configurar el sistema para que funcione en local:
 sudo apt-get install juju-local linux-image-generic-lts-raring linux-headers-generic-lts-raring
 sudo apt-get install openssh-server
 ssh-keygen
-``
+```
 
 E instalar MongoDB mediante `sudo apt-get install mongodb-server`.
 
 **2.- Usándolo, instalar MySql en un táper.**
 
-Ejecutar `sudo juju deploy mysql`
+Ejecutar `sudo juju deploy mysql`:
 
 ![captura](capturas/ej6-3.png)
 
