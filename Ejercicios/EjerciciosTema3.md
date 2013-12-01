@@ -92,6 +92,29 @@ Ejecutar `sudo juju deploy mysql`:
 
 ![captura](capturas/ej6-3.png)
 
+El problema es que despues de ejecutar la orden `expose` las máquinas siguen siempre en estado 'pending'.
+
+###Ejercicio 7)
+
+**1.- Destruir toda la configuración creada anteriormente.**
+
+Sólo hay que ejecutar la orden `sudo juju destroy-environment`.
+
+**2.- Volver a crear la máquina anterior y añadirle mediawiki y una relación entre ellos.**
+
+Ejecutamos las órdenes:
+
+```sh
+sudo juju switch local
+suju juju bootstrap
+
+```
+
+**3.- Crear un script en shell para reproducir la configuración usada en las máquinas que hagan falta.**
+
+###Ejercicio 8)
+
+###Ejercicio 9)
 
 
 
