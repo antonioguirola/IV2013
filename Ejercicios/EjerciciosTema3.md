@@ -71,11 +71,11 @@ El primer paso es añadir el respositorio e instalar juju:
 sudo add-apt-repository ppa:juju/stable
 sudo apt-get update && sudo apt-get install juju-core
 ```
-![captura](capturas/ej6-1.png)
+![captura](capturas/tema3/ej6-1.png)
 
 Establecer *local* como sistema por defecto:
 
-![captura](capturas/ej6-2.png)
+![captura](capturas/tema3/ej6-2.png)
 
 Y configurar el sistema para que funcione en local:
 ```sh
@@ -90,7 +90,7 @@ E instalar MongoDB mediante `sudo apt-get install mongodb-server`.
 
 Ejecutar `sudo juju deploy mysql`:
 
-![captura](capturas/ej6-3.png)
+![captura](capturas/tema3/ej6-3.png)
 
 El problema es que despues de ejecutar la orden `expose` las máquinas siguen siempre en estado 'pending'.
 
@@ -114,7 +114,37 @@ suju juju bootstrap
 
 ###Ejercicio 8)
 
+El primer paso es comprobar que esté activada la aceleración por hardware mediante `kvm-ok`. A continuación hay que ejecutar:
+
+```sh
+sudo apt-get install kvm libvirt-bin
+sudo adduser $USER libvirtd
+```
+
 ###Ejercicio 9)
 
+En primer lugar se instala virt-install, virt-manager y virt-viewer mediante 
+```sh
+sudo apt-get install virtinst
+sudo apt-get install virt-manager
+sudo apt-get install virt-viewer
+``` 
+
+Me he descargado la última versión de la distribución ligera [slitaz](http://www.slitaz.org/es/get/#stable). Para instalarla se siguen los siguientes pasos:
+
+```sh
+cd /home/antonio
+mkdir taper
+sudo virt-install --name slitaz1 --ram 256 --file=/home/antonio/taper/slitaz1.img --file-size=1 --vnc --cdrom=/home/antonio/Descargas/slitaz-4.0.iso
+```
+![captura](capturas/tema3/ej9-1.png)
 
 
+Una vez ejecutado eso aparece una ventana en la que se realiza la instalación normalmente:
+
+
+![captura](capturas/tema3/ej9-2.png)
+
+![captura](capturas/tema3/ej9-3.png)
+
+![captura](capturas/tema3/ej9-4.png)
