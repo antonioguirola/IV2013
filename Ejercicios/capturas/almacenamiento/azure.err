@@ -1,0 +1,11 @@
+Fri Jan 03 2014 16:52:43 GMT+0100 (CET):
+{ [Error: Please set the storage account parameters or one of the following two environment variables to use storage command. 1.AZURE_STORAGE_CONNECTION_STRING, 2. AZURE_STORAGE_ACCOUNT and AZURE_STORAGE_ACCESS_KEY]
+  stack: [Getter/Setter],
+  __frame: undefined,
+  rawStack: [Getter] }
+Error: Please set the storage account parameters or one of the following two environment variables to use storage command. 1.AZURE_STORAGE_CONNECTION_STRING, 2. AZURE_STORAGE_ACCOUNT and AZURE_STORAGE_ACCESS_KEY
+    at getStorageServiceSettings (/usr/lib/node_modules/azure-cli/lib/util/storage.util._js:406:13)
+    at Object.StorageUtil.getBlobService (/usr/lib/node_modules/azure-cli/lib/util/storage.util._js:100:25)
+    at getBlobServiceClient (/usr/lib/node_modules/azure-cli/lib/commands/storage.blob._js:223:37)
+    at uploadAzureBlob (/usr/lib/node_modules/azure-cli/lib/commands/storage.blob._js:635:21)
+
