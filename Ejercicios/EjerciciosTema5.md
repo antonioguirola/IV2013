@@ -56,7 +56,7 @@ En mi caso voy a instalar la distribución [Lubuntu 13.10](http://lubuntu.net/) 
 
 Mediante la orden `qemu-system-x86_64 -hda IV_imgs/ficheroLubuntu.qcow2 -cdrom /home/antonio/Escritorio/lubuntu-13.10-desktop-i386.iso -m 512 &` arrancamos la MV:
 
-![captura](capturas/tema5/ej4-1.png)
+![captura](capturas/tema5/ej4-2.png)
 
 
 
