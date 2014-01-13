@@ -61,3 +61,9 @@ Mediante la orden `qemu-system-x86_64 -hda IV_imgs/ficheroLubuntu.qcow2 -cdrom /
 
 
 [establecer conexión SSH](http://www.bramschoenmakers.nl/en/node/100)
+
+Continua....
+
+### Ejercicio 5)
+
+Para la realización de la práctica ha sido necesario realizar este ejercicio, se puede ver como lo he hecho [en la documentación de la misma.](https://github.com/antonioguirola/practica3IV#m%C3%A1quina-1-ubuntu-server-1204-lts-extra-peque%C3%B1o)
