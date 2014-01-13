@@ -67,3 +67,19 @@ Continua....
 ### Ejercicio 5)
 
 Para la realización de la práctica ha sido necesario realizar este ejercicio, se puede ver como lo he hecho [en la documentación de la misma.](https://github.com/antonioguirola/practica3IV#m%C3%A1quina-1-ubuntu-server-1204-lts-extra-peque%C3%B1o)
+
+### Ejercicio 6)
+
+El primer paso es instalar la GUI para juju:
+
+```sh
+sudo add-apt-repository ppa:juju/stable
+sudo apt-get update && sudo apt-get install juju-core
+sudo juju init
+sudo juju switch local
+sudo juju deploy juju-gui
+```
+
+Obligatorio usar Ubuntu, no funciona en Linux Mint. 
+
+Continua...
