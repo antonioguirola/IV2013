@@ -44,9 +44,6 @@ Al principio no funcionaba el ratón, pero tal y como encontré [aquí](https://
 
 Para instalarlo en el disco duro virtual hay que seguir [las instrucciones de la wiki](http://www.damnsmalllinux.org/wiki/installing_to_the_hard_disk_es.html).
 
-### Ejercicio 3)
-
-
 
 ### Ejercicio 4)
 
@@ -83,3 +80,23 @@ sudo juju deploy juju-gui
 Obligatorio usar Ubuntu, no funciona en Linux Mint. 
 
 Continua...
+
+### Ejercicio 7)
+
+Instalamos los paquetes necesarios y creamos la imagen:
+
+```sh
+sudo apt-get install ubuntu-vm-builder kvm virt-manager
+mkdir imgUbuntu1
+sudo vmbuilder kvm ubuntu --suite precise -o --dest imgUbuntu1/ --hostname ej7IV --domain ej7IV
+```
+Y vemos cómo empieza a descargar la imagen:
+
+![captura](capturas/tema5/ej7-1.png)
+
+Una vez que termina podemos usar `sudo qemu-system-x86_64 -hda tmpLfowGV.qcow2` para arrancar desde esa imagen:
+
+![captura](capturas/tema5/ej7-2.png)
+
+Y vemos como efectivamente está instalado el sistema.
+
