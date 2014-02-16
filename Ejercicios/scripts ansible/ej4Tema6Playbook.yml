@@ -1,0 +1,6 @@
+---
+- hosts: mvAzure
+  sudo: yes 
+  tasks:
+    ## DESCARGAR EL PROYECTO
+    - git: repo=https://github.com/IV-GII/Cafeteros.git dest=/home/azureuser/Cafeteros/
